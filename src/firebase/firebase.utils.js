@@ -1,7 +1,7 @@
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 import 'firebase/compat/auth';
-import { useRef } from 'react';
+// import { userRef } from 'react';
 
 const config =  {
         apiKey: "AIzaSyC6RdmAnPCX5lgn-FI1bAVnti0qVlaEmxY",
@@ -13,7 +13,7 @@ const config =  {
         measurementId: "G-WPMPCG27Q7"
       };
 
-export const createUserProfileDocument = async (userAuth, additionalData) => {
+export const createUserProfileDocuments = async (userAuth, additionalData) => {
     if(!userAuth) return ;
        
     const userRef = firestore.doc(`users/${userAuth.uid}`);
