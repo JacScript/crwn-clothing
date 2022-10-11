@@ -69,7 +69,7 @@ export const createUserProfileDocuments = async (userAuth, additionalData) => {
    return transformedCollection.reduce((accumulator, collection) => {
      accumulator[collection.title.toLowerCase()] = collection;
      return accumulator;
-   } , {});
+   }, {});
  };
 
  export const auth = firebase.auth();
