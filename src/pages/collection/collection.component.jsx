@@ -2,14 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import CollectionItem from '../../components/collection-item/collection-item.component';
-// import { selectCartItems } from '../../redux/cart/cart.selectors';
+
 import { selectCollection } from '../../redux/shop/shop.selectors';
 
 import { CollectionPageContainer, TitleContainer, ItemsContainer } from './collection.styles';
 
 
 const CollectionPage = ({ collection}) => {
-   const { title, items} = collection;
+    const { title, items} = collection;
     return (
     <CollectionPageContainer>
         <TitleContainer>{ title} </TitleContainer>
